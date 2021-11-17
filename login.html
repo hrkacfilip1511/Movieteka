@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Movieteka - Login</title>
+        <link rel="stylesheet" href="login.css">
+        <script src="https://kit.fontawesome.com/aae6ccf1a0.js" crossorigin="anonymous"></script>
+        <link rel="shortcut icon" href="otherImgs/login.png">
+
+    </head>
+    <body>
+        <nav class="nav">
+            <a href="movieteka.html" class="webpgName"><h3>Movieteka</h3></a>
+            <ul>
+                <li><a href="movieteka.html">Home</a></li>
+                <li><a href="login.html"><i class="fas fa-user sec"></i></a></li>
+                <li><a href="contact.html">Contact</a></li>
+               
+            </ul>
+        </nav>
+        <div class="form-container">
+            <h2 class="form-header"><i class="fas fa-user-circle"></i></h2>
+            <form class="form">
+                <div class="for-user"><i class="fas fa-user-alt"></i><input type="text" id="user-name" class="user-name" placeholder="Username" required></div>  
+                <div class="for-pass"><i class="fas fa-key "></i> <input type="password" id="password" placeholder="Password" required></div>
+                <input type="checkbox" id="remember-me"><span class="remember-txt">Remember me</span>
+                <p class="forgot-password-link"><a href="#">Forgot password?</a></p>
+                <button class="submit">Submit</button>
+                <p class="dont-have-acc">Don't have account ? <a href="register.html">Sign up</a></p>
+
+            </form>
+        </div>
+        <footer>
+            <p>&copy; Copyright: Movieteka 2021</p>
+        </footer>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="login.js"></script>
+    </body>
+</html>

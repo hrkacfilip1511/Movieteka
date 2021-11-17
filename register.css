@@ -1,0 +1,387 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Kanit:wght@200&family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300&family=Dancing+Script:wght@600&family=Kanit:wght@200&family=Roboto:wght@300&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --primary-color: black;
+  --secondary-color: white;
+}
+body {
+  background-image: linear-gradient(gray, rgb(157, 200, 218));
+  height: 100vh;
+}
+.fa-user.sec {
+  background-color: var(--primary-color);
+}
+nav {
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: var(--secondary-color);
+  width: 100%;
+  padding: 20px 0;
+  font-family: "Roboto", "sans-serif";
+  position: fixed;
+  height: 80px;
+  transition: all 0.4s ease;
+  z-index: 300;
+}
+.webpgName {
+  font-family: "Roboto", "sans-serif";
+  text-decoration: none;
+  list-style: none;
+  color: var(--secondary-color);
+  font-size: 1.5rem;
+  letter-spacing: 2.5px;
+  position: absolute;
+  left: 150px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+nav ul li {
+  font-size: 1.2rem;
+  cursor: pointer;
+  letter-spacing: 1.2px;
+  margin: 0 50px;
+}
+nav ul a {
+  color: white;
+  text-decoration: none;
+}
+nav a:hover {
+  border-bottom: 5px solid bisque;
+  transform: translateY(-10%);
+  transition: transform 0.9s ease;
+  transition: border-bottom 1.2s ease;
+  color: red;
+}
+nav ul li a:hover {
+  border-bottom: 2px solid bisque;
+  transition: border-bottom 0.3s ease;
+}
+
+nav.active {
+  background-color: var(--secondary-color);
+  height: 50px;
+  border-bottom: 1px solid grey;
+}
+nav.active a:hover {
+  color: red;
+}
+nav.active a {
+  color: var(--primary-color);
+}
+nav.active ul li {
+  color: var(--primary-color);
+}
+.register-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  height: 540px;
+  background-color: wheat;
+  border-radius: 10px;
+}
+
+.shadow-container {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(6, 143, 129);
+  border-radius: 10px;
+  position: relative;
+  height: 80%;
+}
+.form-container {
+  background-color: rgb(0, 255, 255);
+  float: left;
+  width: 50%;
+  height: 640px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+.for-name {
+  margin-left: 25%;
+  width: 200px;
+  margin: 20px;
+  background-color: turquoise;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  height: 40px;
+}
+#name,
+#email,
+#password,
+#conf-password,
+#date {
+  border: none;
+  background: transparent;
+  width: 170px;
+  padding: 10px;
+}
+.fa-user-alt,
+.fa-envelope,
+.fa-lock,
+.fa-key {
+  background-color: rgb(250, 82, 250);
+  height: 40px;
+  width: 40px;
+  padding: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+.for-email {
+  margin-left: 25%;
+  width: 200px;
+  margin: 20px;
+  background-color: turquoise;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  height: 40px;
+}
+.for-password {
+  margin: 20px 50px;
+  width: 200px;
+  margin: 20px;
+  background-color: turquoise;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  height: 40px;
+}
+.for-confirm-password {
+  width: 200px;
+  margin: 20px;
+  background-color: turquoise;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  height: 40px;
+}
+::placeholder {
+  color: black;
+  opacity: 0.7;
+}
+.for-date {
+  width: 200px;
+  margin: 20px;
+  background-color: turquoise;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  height: 40px;
+  opacity: 0.4;
+}
+#name:focus,
+#email:focus,
+#password:focus,
+#conf-password:focus,
+#date:focus {
+  outline: none;
+}
+.for-agree {
+  padding: 10px;
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto" sans-serif;
+  letter-spacing: 0.3px;
+}
+.for-agree #radio {
+  margin-right: 10px;
+  cursor: pointer;
+}
+.registerBtn {
+  cursor: pointer;
+  width: 200px;
+  margin: 20px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background: rgb(0, 225, 241);
+  color: rgb(252, 249, 249);
+  font-size: 1rem;
+  letter-spacing: 0.8px;
+  border: none;
+  font-weight: bold;
+}
+.registerBtn:active {
+  transform: scale(0.98);
+}
+.registerBtn:hover {
+  background: rgb(4, 164, 175);
+}
+.sign-with {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 520px;
+}
+.facebook {
+  margin-left: 70px;
+}
+
+.google,
+.facebook {
+  cursor: pointer;
+  border-radius: 6px;
+  border: none;
+  background: rgb(11, 101, 107);
+}
+.google:hover,
+.facebook:hover {
+  background: rgb(1, 162, 173);
+}
+.google:active,
+.facebook:active {
+  transform: scale(0.98);
+}
+.google a {
+  width: 90px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  text-decoration: none;
+  color: white;
+}
+.google img {
+  margin-right: 5px;
+}
+.facebook a {
+  width: 90px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: white;
+}
+.facebook img {
+  margin-right: 5px;
+}
+.sign-with img {
+  width: 20px;
+  height: 20px;
+}
+
+.banner-container {
+  margin-left: 50%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 540px;
+  z-index: 10;
+  position: absolute;
+  color: white;
+  left: 25%;
+  transform: translate(-50%);
+  font-size: 2rem;
+  width: 100%;
+  letter-spacing: 1px;
+}
+.banner-container .welcome-text {
+  font-family: "Roboto";
+  margin-bottom: 20px;
+  letter-spacing: 1.2px;
+}
+.background {
+  background-image: url("/otherImgs/camera.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -2;
+  height: 640px;
+}
+.background::before {
+  content: "";
+  width: 400px;
+  height: 640px;
+  position: absolute;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  background-color: rgb(41, 40, 40);
+  opacity: 0.75;
+}
+
+.correct {
+  background-color: rgb(0, 218, 0);
+}
+.wrong {
+  background-color: rgb(255, 5, 5);
+}
+.total-container {
+  background-image: url("/otherImgs/cinema.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  z-index: -30;
+}
+.total-container::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.5;
+}
+footer {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+}
+.small-txt {
+  color: rgb(92, 0, 0);
+  text-align: center;
+  display: flex;
+  transition: all 0.5s ease;
+  display: none;
+}

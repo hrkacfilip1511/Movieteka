@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Kanit:wght@200&family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300&family=Dancing+Script:wght@600&family=Kanit:wght@200&family=Roboto:wght@300&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --primary-color: black;
+  --secondary-color: white;
+}
+body {
+  background-image: linear-gradient(gray, rgb(157, 200, 218));
+  height: 100vh;
+}
+nav {
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: var(--secondary-color);
+  width: 100%;
+  padding: 20px 0;
+  font-family: "Roboto", "sans-serif";
+  position: fixed;
+  height: 80px;
+  transition: all 0.4s ease;
+  z-index: 300;
+}
+.webpgName {
+  font-family: "Roboto", "sans-serif";
+  text-decoration: none;
+  list-style: none;
+  color: var(--secondary-color);
+  font-size: 1.5rem;
+  letter-spacing: 2.5px;
+  position: absolute;
+  left: 150px;
+}
+.fa-user.sec {
+  background-color: var(--primary-color);
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+nav ul li {
+  font-size: 1.2rem;
+  cursor: pointer;
+  letter-spacing: 1.2px;
+  margin: 0 50px;
+}
+nav ul a {
+  color: white;
+  text-decoration: none;
+}
+nav a:hover {
+  border-bottom: 5px solid bisque;
+  transform: translateY(-10%);
+  transition: transform 0.9s ease;
+  transition: border-bottom 1.2s ease;
+  color: red;
+}
+nav ul li a:hover {
+  border-bottom: 2px solid bisque;
+  transition: border-bottom 0.3s ease;
+}
+
+nav.active {
+  background-color: var(--secondary-color);
+  height: 50px;
+  border-bottom: 1px solid grey;
+}
+nav.active a:hover {
+  color: red;
+}
+nav.active a {
+  color: var(--primary-color);
+}
+nav.active ul li {
+  color: var(--primary-color);
+}
+.form-container {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  padding: 20px 40px;
+  width: 400px;
+  height: 500px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+}
+.form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.form-header {
+  text-align: center;
+  font-family: "Roboto";
+  font-size: 1.6rem;
+  color: var(--secondary-color);
+  letter-spacing: 1.3px;
+}
+.fa-user-circle {
+  font-size: 3.8rem;
+}
+.for-user {
+  background: rgb(243, 146, 162);
+  width: 250px;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+.user-name {
+  border: none;
+  background: transparent;
+  padding: 10px;
+  width: 220px;
+  font-size: 1rem;
+}
+.for-pass {
+  background: rgb(243, 146, 162);
+  width: 250px;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+#password {
+  border: none;
+  background: transparent;
+  padding: 10px;
+  width: 220px;
+  font-size: 1rem;
+}
+.user-name:focus,
+#password:focus {
+  outline: none;
+}
+.fa-user-alt,
+.fa-key {
+  color: white;
+  background-color: rgb(253, 56, 89);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  padding: 12px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.remember-txt {
+  margin: 0 0 20px 7px;
+  font-size: 1rem;
+  color: rgb(238, 222, 222);
+}
+#remember-me {
+  margin-bottom: 20px;
+}
+.forgot-password-link {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.forgot-password-link a {
+  color: rgb(209, 208, 208);
+}
+.dont-have-acc {
+  margin-top: 30px;
+  color: white;
+  font-size: 1rem;
+}
+.dont-have-acc a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-size: 1rem;
+}
+.submit {
+  margin-top: 20px;
+  width: 250px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  background-color: rgb(18, 159, 214);
+  opacity: 0.4;
+  color: white;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+.submit:hover {
+  opacity: 0.8;
+}
+footer {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.correct {
+  background-color: rgb(1, 233, 1);
+}
+.wrong {
+  background-color: rgb(255, 0, 0);
+}

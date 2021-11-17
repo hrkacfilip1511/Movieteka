@@ -1,0 +1,387 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Kanit:wght@200&family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300&family=Dancing+Script:wght@600&family=Kanit:wght@200&family=Roboto:wght@300&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --primary-color: black;
+  --secondary-color: white;
+}
+body {
+  height: 100vh;
+}
+nav {
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: var(--secondary-color);
+  width: 100%;
+  padding: 20px 0;
+  font-family: "Roboto", "sans-serif";
+  position: fixed;
+  height: 80px;
+  transition: all 0.4s ease;
+  z-index: 300;
+}
+.webpgName {
+  font-family: "Roboto", "sans-serif";
+  text-decoration: none;
+  list-style: none;
+  color: var(--secondary-color);
+  font-size: 1.5rem;
+  letter-spacing: 2.5px;
+  position: absolute;
+  left: 150px;
+}
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+nav ul li {
+  font-size: 1.2rem;
+  cursor: pointer;
+  letter-spacing: 1.2px;
+  margin: 0 50px;
+}
+nav ul a {
+  color: white;
+  text-decoration: none;
+}
+nav a:hover {
+  border-bottom: 5px solid bisque;
+  transform: translateY(-10%);
+  transition: transform 0.9s ease;
+  transition: border-bottom 1.2s ease;
+  color: red;
+}
+nav ul li a:hover {
+  border-bottom: 2px solid bisque;
+  transition: border-bottom 0.3s ease;
+}
+
+nav.active {
+  background-color: var(--secondary-color);
+  height: 50px;
+  border-bottom: 1px solid grey;
+}
+nav.active a:hover {
+  color: red;
+}
+nav.active a {
+  color: var(--primary-color);
+}
+nav.active ul li {
+  color: var(--primary-color);
+}
+
+.container {
+  background: linear-gradient(rgb(233, 97, 97), rgb(219, 30, 30));
+  padding: 10px;
+  width: 50%;
+  height: 500px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  font-family: "Roboto", "sans-serif";
+  box-shadow: 0.5rem 0.5rem black, -0.5rem -0.5rem rgb(255, 255, 255);
+}
+
+.firstCon {
+  float: left;
+  width: 50%;
+  height: 100%;
+  color: rgb(255, 239, 241);
+  background: rgb(180, 155, 155);
+  position: relative;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.firstCon h3 {
+  font-family: "Dancing Script", sans-serif;
+  position: absolute;
+  width: 250px;
+  border: none;
+  border-radius: 20px;
+  left: 20%;
+  top: 10%;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 20px;
+  letter-spacing: 1.5px;
+  box-shadow: rgba(0, 156, 247, 0.25) 0px 50px 100px -20px,
+    rgba(0, 162, 255, 0.3) 0px 30px 60px -30px,
+    rgba(4, 210, 224, 0.35) 0px -2px 6px 0px inset;
+}
+.firstCon small {
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  background: linear-gradient(rgb(59, 59, 59), rgb(44, 39, 39));
+  border: none;
+  border-radius: 20px;
+  width: 200px;
+  text-align: center;
+  padding: 15px;
+  position: absolute;
+  bottom: -40px;
+  letter-spacing: 1px;
+  left: 50%;
+  transform: translate(-50%);
+  font-family: "Kanit", sans-serif;
+  text-transform: uppercase;
+  font-size: 0.5rem;
+  color: rgb(228, 217, 215);
+}
+.firstCon small span {
+  margin-left: 10px;
+}
+.anotherCon {
+  margin-left: 50%;
+  height: 100%;
+  background: rgb(180, 155, 155);
+  position: relative;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.contactForm {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+}
+
+#nameDiv {
+  color: white;
+}
+#name {
+  margin: 2px 0 10px;
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid rgb(27, 26, 25);
+  padding: 5px;
+  width: 250px;
+  color: white;
+}
+
+#msgDiv {
+  margin-bottom: 30px;
+  color: white;
+}
+#msg {
+  margin: 2px 0 10px;
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid rgb(27, 26, 25);
+  padding: 5px;
+  width: 250px;
+  color: white;
+}
+#emailDiv {
+  margin: 28px 0 28px;
+  color: white;
+}
+#mail {
+  margin: 2px 0 10px;
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid rgb(27, 26, 25);
+  padding: 5px;
+  color: white;
+  width: 250px;
+}
+#mail:focus,
+#name:focus,
+#msg:focus {
+  outline: none;
+}
+::placeholder {
+  font-family: "Dancing Script", sans-serif;
+  font-size: 1rem;
+  color: rgb(206, 204, 204);
+  letter-spacing: 1.2px;
+}
+.submit {
+  font-family: "Cormorant Garamond", serif;
+  margin-top: 30px;
+  padding: 10px 20px;
+  width: 250px;
+  text-align: center;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  background: rgb(240, 123, 102);
+  font-size: 1.4rem;
+}
+.submit:hover {
+  opacity: 0.8;
+  color: white;
+}
+.submit:active {
+  transform: scale(0.98);
+}
+.background {
+  background: url("/otherImgs/contact.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -2;
+  height: 100vh;
+}
+.background::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgb(92, 91, 92);
+  opacity: 0.7;
+}
+footer {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+}
+.container-submit-message {
+  position: absolute;
+  top: 20%;
+  right: 3%;
+  width: 400px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 20;
+  border: none;
+}
+.cloud {
+  background-color: turquoise;
+  padding: 20px;
+  color: white;
+  text-align: center;
+  width: 100%;
+  margin: 5px;
+  line-height: 1.5rem;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  font-weight: 900;
+  letter-spacing: 0.8px;
+  animation: show 1.6s ease;
+}
+.cloud i {
+  color: red;
+}
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.opinion-container {
+  max-width: 750px;
+  background-color: rgb(10, 145, 150);
+  padding: 20px;
+  position: absolute;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  border-radius: 10px;
+  margin: 20px 0;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  font-family: "Roboto", "sans-serif";
+}
+.quote {
+  position: absolute;
+  top: 35px;
+  color: rgb(201, 195, 195);
+}
+.fa-quote-right {
+  right: 12px;
+}
+.fa-quote-left {
+  left: 12px;
+}
+.opinion {
+  text-align: justify;
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 20px 10px;
+  color: white;
+}
+.user-details {
+  margin-top: 30px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.user-image {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  margin-top: 20px;
+  object-fit: cover;
+}
+.username {
+  margin: 10px 0;
+  color: white;
+  font-size: 1.4rem;
+  text-align: center;
+  letter-spacing: 1.1px;
+}
+.role {
+  color: white;
+  font-size: 1.1rem;
+  text-align: center;
+  font-style: italic;
+  letter-spacing: 0.8px;
+}
+.progress {
+  transform-origin: left;
+  width: 100%;
+  background-color: white;
+  height: 4px;
+  z-index: -1;
+  margin-top: -10px;
+  animation: fill 12s linear infinite;
+}
+.big-one {
+  background: url("/otherImgs/critics.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 80vh;
+  position: relative;
+  z-index: -2;
+}
+.big-one::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(92, 91, 92);
+  opacity: 0.6;
+}
+@keyframes fill {
+  0% {
+    transform: scaleX(0);
+  }
+}
